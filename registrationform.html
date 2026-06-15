@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registration Form</title>
+    <style>
+        /* Basic reset and centering */
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f9;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            margin: 0;
+            padding: 20px;
+            box-sizing: border-box;
+        }
+
+        /* Styling the form container */
+        .registration-container {
+            background-color: #ffffff;
+            padding: 30px;
+            border-radius: 8px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+            width: 100%;
+            max-width: 400px;
+        }
+
+        .registration-container h2 {
+            text-align: center;
+            margin-bottom: 20px;
+            color: #333;
+        }
+
+        /* Form elements styling */
+        .input-group {
+            margin-bottom: 15px;
+        }
+
+        .input-group label {
+            display: block;
+            margin-bottom: 5px;
+            color: #666;
+            font-weight: bold;
+        }
+
+        .input-group input[type="text"],
+        .input-group input[type="email"],
+        .input-group input[type="tel"],
+        .input-group input[type="password"],
+        .input-group input[type="date"],
+        .input-group select {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            box-sizing: border-box;
+            font-size: 14px;
+        }
+
+        /* Radio button specific styling */
+        .radio-group {
+            display: flex;
+            gap: 15px;
+            align-items: center;
+            margin-top: 5px;
+        }
+
+        .radio-group label {
+            font-weight: normal;
+            margin-bottom: 0;
+            color: #333;
+        }
+
+        button {
+            width: 100%;
+            padding: 12px;
+            background-color: #28a745;
+            color: white;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 16px;
+            margin-top: 10px;
+        }
+
+        button:hover {
+            background-color: #218838;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="registration-container">
+        <h2>Register Here</h2>
+        <form action="/submit-registration" method="POST">
+            
+            <div class="input-group">
+                <label for="fullname">Full Name</label>
+                <input type="text" id="fullname" name="fullname" placeholder="premwaghmode" required>
+            </div>
+
+            <div class="input-group">
+                <label for="email">Email Address</label>
+                <input type="email" id="email" name="email" placeholder="premwaghmode@gmail.com" required>
+            </div>
+
+            <div class="input-group">
+                <label for="contact">Contact Number</label>
+                <input type="tel" id="contact" name="contact" placeholder="+1 234 567 8900" required>
+            </div>
+
+            <div class="input-group">
+                <label for="password">Password</label>
+                <input type="password" id="password" name="password" placeholder="Create a password" required>
+            </div>
+
+            <div class="input-group">
+                <label for="confirm-password">Re-enter Password</label>
+                <input type="password" id="confirm-password" name="confirm-password" placeholder="Confirm your password" required>
+            </div>
+
+            <div class="input-group">
+                <label>Gender</label>
+                <div class="radio-group">
+                    <input type="radio" id="male" name="gender" value="male" required>
+                    <label for="male">Male</label>
+                    
+                    <input type="radio" id="female" name="gender" value="female">
+                    <label for="female">Female</label>
+                    
+                    <input type="radio" id="other" name="gender" value="other">
+                    <label for="other">Other</label>
+                </div>
+            </div>
+
+            <div class="input-group">
+                <label for="dob">Date of Birth</label>
+                <input type="date" id="dob" name="dob" required>
+            </div>
+
+            <div class="input-group">
+                <label for="language">Preferred Language</label>
+                <select id="language" name="language" required>
+                    <option value="" disabled selected>Select a language</option>
+                    <option value="java">Java</option>
+                    <option value="cpp">C++</option>
+                    <option value="python">Python</option>
+                    <option value="ruby">Ruby</option>
+                </select>
+            </div>
+            
+            <button type="submit">Register</button>
+        </form>
+    </div>
+
+</body>
+</html>
